@@ -11,7 +11,7 @@ function Login() {
     const [error,setError] = useState()
     const navigate =useNavigate()
     const handleSubmit =()=>{
-        axios.post(`${serverUrl}/login`,{...form} )
+        axios.post(`${serverUrl}/login`,{...form} ,{withCredentials:true}) 
         .then((res)=>{
             navigate('/')
             //navigate

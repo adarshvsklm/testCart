@@ -1,4 +1,4 @@
-import express, { response } from 'express';
+import express, { response, Router } from 'express';
 import Product from '../Models/productModels.js';
 
 const router = express.Router();
@@ -16,4 +16,5 @@ router.post('/add', (req, res) => {
     });
 });
 
+ 
 export default router;
