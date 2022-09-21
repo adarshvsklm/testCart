@@ -16,6 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -61,6 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
  
 
 export default function Navbar() {
+    const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -129,10 +131,10 @@ export default function Navbar() {
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           {/* <Badge badgeContent={4} color="error"> */}
             {/* <MailIcon /> */}
-             <ShoppingCartIcon />
+             <ShoppingCartIcon onClick={()=>{navigate('/cart')}} />
           {/* </Badge> */}
         </IconButton>
-        <p>Cart</p>
+        <p  onClick={()=>{navigate('/cart')}}>Cart</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -196,7 +198,7 @@ export default function Navbar() {
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               {/* <Badge badgeContent={4} color="error"> */}
                 {/* <MailIcon /> */}
-                <ShoppingCartIcon />
+                <ShoppingCartIcon  onClick={()=>{navigate('/cart')}}/>
                {/* </Badge> */}
             </IconButton>
             <IconButton

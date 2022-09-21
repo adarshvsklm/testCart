@@ -5,6 +5,7 @@ import SignUpPage from './Pages/SignUpPage';
 import AddProduct from './Pages/AddProduct';
 import ViewProducts from './Pages/ViewProductsPage';
 import CartPage from './Pages/CartPage';
+import AdminVieweAllProductsjsx from './Pages/AdminVieweAllProductsjsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/product/add' element={<AddProduct />} />
           <Route path='/products' element={<ViewProducts />} /> 
           <Route path='/cart' element={<CartPage />} />
+          <Route path='/admin/products' element={<AdminVieweAllProductsjsx />} />
         </Routes>
       </BrowserRouter>
     </div>
