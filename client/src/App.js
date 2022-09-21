@@ -6,12 +6,14 @@ import AddProduct from './Pages/AddProduct';
 import ViewProducts from './Pages/ViewProductsPage';
 import CartPage from './Pages/CartPage';
 import AdminVieweAllProductsjsx from './Pages/AdminVieweAllProductsjsx';
+import AdminNavbar from './Components/AdminNavbar';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<AdminNavbar />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/signUp' element={<SignUpPage />} />
           <Route path='/product/add' element={<AddProduct />} />
